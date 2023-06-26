@@ -33,7 +33,7 @@ jobs:
         username: "ubuntu"
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /home/ubuntu
+          cd /home/ubuntu/backend
           git pull
           npm install --production
           pm2 restart all
