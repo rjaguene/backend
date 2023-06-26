@@ -38,6 +38,7 @@ jobs:
         script: |
           cd /home/ubuntu/backend
           git pull
+	  npm install -g pm2
           npm install --production
           pm2 restart all
 
