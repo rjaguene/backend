@@ -22,13 +22,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    # Add this step to install PM2 globally
     - name: Install PM2
       run: npm install -g pm2
-    # - run: npm test
-    #   env:
-    #     CI: true
-    # - run: npm run build
     - name: 'Deploy to Server'
       uses: appleboy/ssh-action@master
       with:
@@ -38,7 +33,7 @@ jobs:
         script: |
           cd /home/ubuntu/backend
           git pull
-	  npm install -g pm2
+          npm install -g pm2
           npm install --production
           pm2 restart all
 
