@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 const bodyParser = require('body-parser'); // Ajoutez ceci
 const cors = require('cors'); // Ajoutez ceci
-
+//lol
 app.use(cors()); // Ajoutez ceci
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
